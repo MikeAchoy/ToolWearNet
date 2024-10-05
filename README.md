@@ -9,9 +9,19 @@ To optimize machining operations and minimize waste, it is important to monitor 
 
 By predicting wear levels in real-time, this project helps reduce waste, optimize tool usage, and make maintenance schedules more efficient, ultimately improving manufacturing sustainability.
 
+![Machining Tool Wear](README_images/Introduction.png)
+
 ## Project Overview
 
+![Actual Model Wear Segmentation Results](README_images/Results.png)
+
 **ToolWearNet** utilizes a convolutional neural network (CNN) to analyze images of machining tools and detect wear, with a focus on determining the VBmax value, which is a critical parameter for evaluating tool wear. The project includes scripts for data preprocessing, image augmentation, and model training/testing.
+
+<p align="center">
+  <img src="README_images/Results/Accuracy.png" alt="Accuracy Chart" width="30%">
+  <img src="README_images/Results/Loss.png" alt="Loss Chart" width="30%">
+  <img src="README_images/Results/IoU.png" alt="IoU Chart" width="30%">
+</p>
 
 ## Features
 
@@ -73,13 +83,6 @@ pip install numpy opencv-python matplotlib tensorflow
 - **TensorFlow**: For building and training the deep learning models.
 - **Keras**: Used within TensorFlow for high-level deep learning model APIs.
 
-```python
-import numpy as np
-import cv2
-import matplotlib.pyplot as plt
-import tensorflow as tf
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-```
 
 ## Usage
 
