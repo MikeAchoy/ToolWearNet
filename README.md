@@ -5,7 +5,7 @@
 
 Machining tools are critical components in industrial manufacturing processes, but over time, these tools are subject to wear and tear, leading to inefficiencies, decreased product quality, and increased operational costs. Tool failure or excessive wear can result in tool waste, unplanned downtime, and loss of productivity.
 
-To optimize machining operations and minimize waste, it is important to monitor tool wear, especially the flank wear (VBmax), and schedule maintenance before failure occurs. Traditional methods of monitoring are often manual, time-consuming, and prone to human error. This project, **ToolWearNet**, aims to automate the process using deep learning to detect and measure machining tool wear from images.
+To optimize machining operations and minimize waste, it is important to monitor tool wear, especially the <u>flank wear</u> (VBmax), and schedule maintenance before failure occurs. Traditional methods of monitoring are often more complicated, inderect, and do measure VBmax. **ToolWearNet**, aims to automate the process using deep learning to detect and measure machining tool wear from images.
 
 By predicting wear levels in real-time, this project helps reduce waste, optimize tool usage, and make maintenance schedules more efficient, ultimately improving manufacturing sustainability.
 
@@ -104,12 +104,13 @@ We use `ImageDataGenerator` from Keras for real-time data augmentation, such as 
 
 ```python
 datagen = ImageDataGenerator(
-    rotation_range=20,
-    width_shift_range=0.2,
-    height_shift_range=0.2,
+    rotation_range=90,
+    width_shift_range=0.1,
+    height_shift_range=0.1,
     shear_range=0.2,
     zoom_range=0.2,
     horizontal_flip=True,
+    vertical_flip=True.
     fill_mode='nearest'
 )
 ```
