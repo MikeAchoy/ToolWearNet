@@ -15,7 +15,11 @@ By predicting wear levels in real-time, this project helps reduce waste, optimiz
 
 ![Actual Model Wear Segmentation Results](README_images/Results.png)
 
-**ToolWearNet** utilizes a convolutional neural network (CNN) to analyze images of machining tools and detect wear, with a focus on determining the VBmax value, which is a critical parameter for evaluating tool wear. The project includes scripts for data preprocessing, image augmentation, and model training/testing.
+**ToolWearNet** uses a convolutional neural network (CNN) in U-Net architecture to analyze images of machining tools and highlight wear, with main focus on determining the VBmax value, which is a critical parameter for evaluating tool wear. The project includes scripts for data preprocessing, image augmentation, and model training/testing, loading a tool image, predicting the wear mask, and post processing for determining the max flank wear on the tool.
+
+![U-Net Architecture](README_images/u-net_architecture.png)
+
+## Result Graphs
 
 <p align="center">
   <img src="README_images/Results/Accuracy.png" alt="Accuracy Chart" width="30%">
