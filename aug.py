@@ -108,7 +108,6 @@ data_gen_args = dict(
     fill_mode='nearest'
 )
 
-
 # Augmented data generation for training and validation
 train_image_datagen = ImageDataGenerator(**data_gen_args)
 valid_image_datagen = ImageDataGenerator()
@@ -116,8 +115,8 @@ valid_image_datagen = ImageDataGenerator()
 aug_train_gen = AugmentedDataGen(train_ids, train_path, batch_size=batch_size, image_size=image_size, image_datagen=train_image_datagen)
 aug_valid_gen = AugmentedDataGen(valid_ids, train_path, batch_size=batch_size, image_size=image_size, image_datagen=valid_image_datagen)
 
-
 gen = AugmentedDataGen(train_ids, train_path, batch_size=batch_size, image_size=image_size)
+
 x, y = gen.__getitem__(0)
 print(x.shape, y.shape)
 
@@ -127,7 +126,6 @@ else:
     r = random.randint(0, len(x)-1)
     print("Random index:", r)
     # Reste du code...
-
 
 r = random.randint(0, len(x)-1)
 
@@ -151,6 +149,7 @@ def bottleneck(x, filters, kernel_size=(3, 3), padding="same", strides=1):
     c = keras.layers.Conv2D(filters, kernel_size, padding=padding, strides=strides, activation="relu")(x)
     c = keras.layers.Conv2D(filters, kernel_size, padding=padding, strides=strides, activation="relu")(c)
     return c
+
 
 # Modèle UNet
 def UNet():
